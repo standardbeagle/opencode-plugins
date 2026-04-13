@@ -1,0 +1,20 @@
+{
+  "name": "@standardbeagle/opencode-ps-bash",
+  "version": "0.1.0",
+  "description": "Install and configure ps-bash as the bash shell for OpenCode",
+  "main": "dist/index.js",
+  "exports": {
+    "./server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}

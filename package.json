@@ -1,0 +1,22 @@
+{
+  "name": "@standardbeagle/opencode-plugins",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "plugins/*"
+  ],
+  "scripts": {
+    "build": "bun run --filter './plugins/*' build",
+    "typecheck": "bun run --filter './plugins/*' typecheck",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "bun run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "@opencode-ai/plugin": "^1.4.3",
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}
